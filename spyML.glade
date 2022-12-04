@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkListStore" id="minnowsList">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+      <!-- column-name gint1 -->
+      <column type="gint"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">1</col>
+        <col id="1">0</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">2</col>
+        <col id="1">0</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">3</col>
+        <col id="1">0</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">4</col>
+        <col id="1">0</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">5</col>
+        <col id="1">0</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">6</col>
+        <col id="1">0</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">7</col>
+        <col id="1">0</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">8</col>
+        <col id="1">0</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">9</col>
+        <col id="1">0</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkWindow" id="window">
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">SPY Stock Prediction</property>
+    <property name="resizable">False</property>
+    <property name="icon">imgs/icon.png</property>
+    <property name="startup-id">OATES Launcher</property>
+    <signal name="destroy" handler="on_window_destroy" swapped="no"/>
+    <child>
+      <object class="GtkFixed" id="fixed">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="margin-left">10</property>
+        <property name="margin-right">15</property>
+        <property name="margin-top">10</property>
+        <property name="margin-bottom">38</property>
+        <child>
+          <object class="GtkLabel" id="spyStockPrediction">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">SPY Stock Prediction</property>
+            <attributes>
+              <attribute name="font-desc" value="URW Gothic 20"/>
+              <attribute name="style" value="normal"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">509</property>
+            <property name="y">-4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="defaultChartButton">
+            <property name="label" translatable="yes">Default Chart</property>
+            <property name="width-request">110</property>
+            <property name="height-request">65</property>
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="tooltip-text" translatable="yes">Default SPY stock chart</property>
+            <property name="always-show-image">True</property>
+            <signal name="clicked" handler="default_chart" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">322</property>
+            <property name="y">650</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="modelChartButton">
+            <property name="label" translatable="yes">Model Chart</property>
+            <property name="width-request">100</property>
+            <property name="height-request">65</property>
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="tooltip-text" translatable="yes">Chart of stock with training and test data</property>
+            <signal name="clicked" handler="model_chart" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">572</property>
+            <property name="y">650</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="futurePredictionsButton">
+            <property name="label" translatable="yes">Next Day Prediction</property>
+            <property name="width-request">87</property>
+            <property name="height-request">65</property>
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="tooltip-text" translatable="yes">Prediction result for the next day</property>
+            <signal name="clicked" handler="future_predictions" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">801</property>
+            <property name="y">650</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="traingDataLabel">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Training Data</property>
+            <attributes>
+              <attribute name="font-desc" value="URW Gothic 12"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">434</property>
+            <property name="y">120</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="testDataLabel">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Test Data</property>
+            <attributes>
+              <attribute name="font-desc" value="URW Gothic 12"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">732</property>
+            <property name="y">122</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="traingingDataEntry">
+            <property name="width-request">100</property>
+            <property name="height-request">45</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="tooltip-text" translatable="yes">Enter percentage of training data</property>
+            <property name="placeholder-text" translatable="yes">1-99%</property>
+            <signal name="changed" handler="change_test_data" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">400</property>
+            <property name="y">180</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="testDataEntry">
+            <property name="width-request">100</property>
+            <property name="height-request">45</property>
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can-focus">True</property>
+          </object>
+          <packing>
+            <property name="x">700</property>
+            <property name="y">180</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="runAlgrorithmButton">
+            <property name="label" translatable="yes">Run Algortihm</property>
+            <property name="width-request">100</property>
+            <property name="height-request">51</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="tooltip-text" translatable="yes">Run machine learning algorithm</property>
+            <signal name="clicked" handler="start_algorithm" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">565</property>
+            <property name="y">444</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+          </object>
+          <packing>
+            <property name="x">1153</property>
+            <property name="y">744</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="predictCheckBox">
+            <property name="label" translatable="yes">Predict Next Day</property>
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">False</property>
+            <property name="active">True</property>
+            <property name="draw-indicator">True</property>
+            <signal name="toggled" handler="predict_checkbox" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">561</property>
+            <property name="y">299</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
