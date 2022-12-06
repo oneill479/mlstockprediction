@@ -28,6 +28,6 @@ This is the User Guide for installing and using the SPY Prediction Tool.
 ![](imgs/modelchart.png)
 ![](imgs/nextdayprediction.png)
 - Any of the chart data can be saved for future use with the menu at the bottom of each pop up. Just click the floppy disk icon and choose a directory to save to
-- ![](imgs/chartmenu.png)
+![](imgs/chartmenu.png)
 - The application can be run multiple times to test the accuracy of results
 - To close the application just click the "x" in the top right corner
